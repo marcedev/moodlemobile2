@@ -1,8 +1,10 @@
 {
     "appsettings": "App settings",
     "help": "Help",
-    "changesite": "Change site",
-    "mycourses": "My courses",
+    "changesite": "http://my.marcellin.vic.edu.au",
+    "mycourses": "MyMarcellin",
     "togglemenu": "Toggle menu",
-    "website": "Website"
+    "website": "College website",
+    "website-n": "Eagle Newsletter",
+    "sports": "Sports"
 }

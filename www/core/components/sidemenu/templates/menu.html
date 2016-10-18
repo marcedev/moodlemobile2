@@ -15,7 +15,7 @@
 
     </ion-side-menu-content>
 
-    <ion-side-menu side="left" id="mm-side-menu-left">
+    <ion-side-menu side="left">
         <header>
             <div class="bar bar-header bar-side-menu">
                 <div class="item item-avatar">
@@ -42,11 +42,36 @@
                             <span ng-show="badge > 0" class="badge badge-positive">{{badge}}</span>
                         </a>
                     </li>
-                    <li>
+                    <!--li>
                         <a menu-close class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link title="{{ 'mm.sidemenu.website' | translate}}">
                             <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
                         </a>
+                    </li-->
+                 <li><!-- site changed to collge website url-->
+                     <a menu-close class="item item-icon-left" ng-href="http://marcellin.vic.edu.au" mm-link title="{{ 'mm.sidemenu.website' | translate}}">
+                     <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
+                     </a>
+                </li>
+                    
+                    
+                    
+                    <!-- Marcellin Eagle newsletter link-->
+                    <li>
+                        <a menu-close class="item item-icon-left" mm-link title="{{ 'mm.sidemenu.website-n' | translate}}"
+                            ng-href="http://marcellin.vic.edu.au/publications/the-eagle">
+                            <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website-n' | translate}}
+                        </a>
                     </li>
+                    
+                    <!-- Marcellin College Sports link-->
+                    <li>
+                        <a menu-close class="item item-icon-left" mm-link title="{{ 'mm.sidemenu.sports' | translate}}"
+                            ng-href="http://marcellin.vic.edu.au/publications/sports-fixture">
+                            <i class="icon ion-earth"></i>{{ 'mm.sidemenu.sports' | translate}}
+                        </a>
+                    </li>
+
+                    
                     <li>
                         <a menu-close class="item item-icon-left" ng-href="{{docsurl}}" mm-link title="{{ 'mm.sidemenu.help' | translate}}">
                             <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
@@ -58,18 +83,19 @@
                             <i class="icon ion-gear-b"></i>{{ 'mm.sidemenu.appsettings' | translate}}
                         </a>
                     </li>
-                    <li>
+                    <!--li>
                         <a class="item item-icon-left" ng-click="logout()" title="{{ 'mm.sidemenu.changesite' | translate}}">
                             <i class="icon ion-log-out"></i>{{ 'mm.sidemenu.changesite' | translate}}
                         </a>
-                    </li>
+                    </li-->
                 </ul>
             </nav>
 
-        </ion-content>
-    </ion-side-menu>
+            <!-- For now we won't have pull to refresh caches.
+            <ion-refresher pulling-text="Pull to invalidate caches"
+                on-refresh="invalidateCaches()"
+                refreshing-icon="ion-loading-c"> -->
 
-    <ion-side-menu side="right" id="mm-side-menu-right" is-enabled="rightSideMenu && rightSideMenu.show">
-        <ng-include ng-if="rightSideMenu && rightSideMenu.show" src="rightSideMenu.template"></ng-include>
+        </ion-content>
     </ion-side-menu>
 </ion-side-menus>
